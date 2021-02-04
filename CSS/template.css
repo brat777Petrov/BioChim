@@ -22,8 +22,7 @@ body {
 	margin: 0px 0px 0px 0px;
 	font-size: 14px;
 	color: #333333;
-}/*пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ), пїЅпїЅпїЅпїЅпїЅпїЅ*/
-
+}
 a:link, a:visited {
 	text-decoration: none;
 	font-weight: normal;
@@ -37,7 +36,7 @@ a:hover {
 input.button {
  cursor: pointer;
  background:#ffffff;
-}/*пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ*/
+}
 
 p {
   margin-top: 0;
@@ -52,8 +51,7 @@ p {
 	padding: 0;
 	background: #ffffff url(../images/bg.png) top center repeat-x;
 	margin:0;
-}/*пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ)*/
-
+}
 .top_bg {
 	width:998px;
 	height:0px;
@@ -95,7 +93,7 @@ div#wrapper {
 	line-height:1.4em;
 	color:#55803f;
 	text-decoration:none;
-}/*пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ-пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ*/
+}
 
 div#newsflash {
 	width: auto;
@@ -282,7 +280,7 @@ div.componentheading {
 h1 {
 	padding: 12px 0px 0px 0px;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 26px;
+	font-size: 24px;
 	font-weight: bold;
 	vertical-align: bottom;
 	letter-spacing: 1px;
@@ -296,7 +294,7 @@ margin-bottom: 0px;
 #h1red {
 padding: 14px 0px;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 26px;
+	font-size: 18px;
 	font-weight: bold;
 	vertical-align: center;
 	letter-spacing: 2px;
@@ -308,13 +306,14 @@ padding: 14px 0px;
 h2, .contentheading {
 	padding: 0;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: bold;
          vertical-align: bottom;
 	color: #006400;
 	text-align: left;
 	width: 100%;
 }
+
 
 table.contentpaneopen h3 {
 	margin-top: 25px;
@@ -569,7 +568,7 @@ div.module_menu ul li a:link, div.module_menu ul li a:visited {
 
 #leftcolumn h3, #rightcolumn h3 {
 	margin: 0;
-	color:#fefefe;
+	color: black;
 	font-weight: bold;
 	font-family: Helvetica,Arial,sans-serif;
 	font-size: 14px;
@@ -986,6 +985,7 @@ a.sglink:hover {
 	text-decoration:none;
 }
 
+/* ***************************** */
  .container_foto {
 	display: flex;
 	flex-direction: row;
@@ -1026,4 +1026,11 @@ div.foto_vypusknika>p {
   font-weight: 600;
 }
 
+/* ******* TEST ************ */
 
+.area_test {
+	height: 500px;
+	width: 740px;
+
+	border: 2px solid blue;
+}
