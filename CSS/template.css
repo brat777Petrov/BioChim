@@ -921,7 +921,12 @@ div#logo_bg div {
 }
 
 div#footer {
-  padding-top: 850px;
+  padding-top: 950px;
+	background: url(../images/footer_m_bg.jpg) 0 100% repeat-x; 
+}
+
+div#footer_index {
+  padding-top: 100px;
 	background: url(../images/footer_m_bg.jpg) 0 100% repeat-x; 
 }
 
@@ -1030,7 +1035,7 @@ div.foto_vypusknika>p {
 
 .area_test {
 	width: 700px;
-	height: 720px;
+	height: 780px;
 
   padding: 20px;
 	border: 2px solid blue;
@@ -1052,6 +1057,7 @@ div.foto_vypusknika>p {
   height: 200px;
 
   margin-bottom: 20px;
+  padding: 20px;
 
   border: 1px solid salmon;
 }
@@ -1059,7 +1065,11 @@ div.foto_vypusknika>p {
 .test_answer {
   height: 300px;
 
+  display: flex;
+  flex-direction: column;
+
   margin-bottom: 20px;
+  padding-top: 10px;
 
   border: 1px solid yellow;
 }
@@ -1082,4 +1092,17 @@ div.foto_vypusknika>p {
 
 .test_button:hover {
   background-color: #007bff;
+}
+
+.answer_button {
+  margin: 10px 20px;
+  padding: 10px 30px;
+
+  border: 1px solid black;
+
+  cursor: pointer;
+}
+
+.answer_button_active {
+  background-color: green;
 }
