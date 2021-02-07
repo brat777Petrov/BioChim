@@ -16,7 +16,7 @@ let base =  await response.json();
   print_question (base.bullet[i].question);
   print_img (base.bullet[i].picture);
   print_answers (base.bullet[i].typeOFanswers, base.bullet[i].answers);
-  save_result();
+  //save_result();
   i++; //next question
 
 return ;
@@ -62,6 +62,3 @@ function print_answers(typeOFanswers, answers) {
 
 };
 
-save_result() {
-  
-}
