@@ -146,7 +146,17 @@ div#footer_r a:link, div#footer_r a:visited  {
 
 #area {
 	padding: 0;
+  height: auto;
 	width:100%;
+}
+
+
+#whitebox_m:after {
+  content: " ";
+  display: table;
+
+  clear: both;
+  overflow: hidden;
 }
 
 #whitebox {
@@ -216,6 +226,7 @@ td.pill_m {
 }
 
 #leftcolumn ,#rightcolumn {
+  height: auto;
 	margin: 0;
 	width: 211px;
 	padding:10px 10px 10px 0;
@@ -921,7 +932,10 @@ div#logo_bg div {
 }
 
 div#footer {
-  padding-top: 950px;
+  width: 1050px;
+
+  margin: 0 auto;
+
 	background: url(../images/footer_m_bg.jpg) 0 100% repeat-x; 
 }
 
@@ -1035,7 +1049,7 @@ div.foto_vypusknika>p {
 
 .area_test {
 	width: 700px;
-	height: 780px;
+	/*height: 780px;*/
 
   padding: 20px;
 	border: 2px solid blue;
@@ -1105,4 +1119,38 @@ div.foto_vypusknika>p {
 
 .answer_button_active {
   background-color: green;
+}
+
+.hide {
+  display: none;
+
+}
+
+.result {
+  margin: 10px 0;
+
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.question_title {
+
+  margin: 10px 0 20px 0;
+
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.question {
+  font-weight: 600;
+}
+
+.picture {
+  height: 15%;
+}
+
+.line {
+  width: 700px;
+  border: 1px solid green;
 }
