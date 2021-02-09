@@ -150,13 +150,23 @@ function print_result (base,baseResult) {
           field.append('<div class="result answers">'+base.bullet[j].answers[n]+'<span class="blue">'+your+'</span>'+'</div>');
         }
       }
+    field.append('<div class="line"></div>');//line
+    } else {
+
+      your = " (Ваш ответ)  ";
+      field.append('<div class="result answers green">'+ base.bullet[j].right_answer + '</div>');
+
+      field.append('<div class="result answers">'+'<span class="blue">'+your+'</span>'+ baseResult[j+1] + '</div>');
+
+
+    field.append('<div class="line"></div>');//line
     }
-    field.append('<div class="line"></div>');
+    
   }
 
   // *** Print - input *********************
 
-
+  
 
 
 
