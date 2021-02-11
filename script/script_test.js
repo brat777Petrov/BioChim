@@ -1,5 +1,6 @@
 let i = 0;// number question
 let baseResult = [];
+
 localStorage.clear();
 next();//first question print
 
@@ -7,7 +8,7 @@ next();//first question print
 
 
 async function next() {
-
+  localStorage.flag_answer = false;
 //************** Подключение JSON файла 
                      
 let  response =  await fetch('../tests/biolog_test_1.json');
@@ -25,15 +26,18 @@ let base =  await response.json();
   print_answers (base.bullet[i].typeOFanswers, base.bullet[i].answers);
   save_result(base.bullet[i].typeOFanswers);
   baseResult.push(localStorage.result);
- 
+  
+  
+  
   i++; //next question
+
 
   if (i == 7) {
     print_result(base, baseResult);
    
   }
 
-return ;
+
 }
 
 //* **************************** FUNCTION ********************* 
@@ -82,6 +86,7 @@ function print_answers(typeOFanswers, answers) {
     $('div.test_answer').html('');
     let answer = '<input type="text" id="res">'
     $('div.test_answer').append(answer);
+   
   }
 
 
@@ -95,14 +100,17 @@ function save_result(typeOFanswers) {
 
       $('.answer_button').css('background-color','white');
       $(this).css('background-color','green');
-      
+      localStorage.flag_answer = true;
       localStorage.result = this.innerHTML ;
-         
+      
+      console.log(localStorage.flag_answer);
+     
     })
     
   } else {
     $('input').change(function(){
       localStorage.result = this.value;
+      localStorage.flag_answer = true;
     });
    
   }
@@ -141,22 +149,45 @@ function print_result (base,baseResult) {
         }
               //mark right
         if (base.bullet[j].answers[n] == base.bullet[j].right_answer) {
-          field.append('<div class="result answers green">'+base.bullet[j].answers[n]+'<span class="blue">'+your+'</span>'+'</div>');
-
           //  Check right answer
-          if (base.bullet[j].right_answer == baseResult[j+1]) { total_right++ ; }
-          
+          let answer_color = 'red';
+          if (base.bullet[j].right_answer == baseResult[j+1]) { 
+            total_right++ ; 
+            answer_color = 'green'; }
+
+          field.append('<div class="result answers green">'+base.bullet[j].answers[n]+'<span class="'+answer_color+'">'+your+'</span>'+'</div>');
+ 
+                   
         } else {
-          field.append('<div class="result answers">'+base.bullet[j].answers[n]+'<span class="blue">'+your+'</span>'+'</div>');
+          
+          let answer_color = 'red';
+          if (base.bullet[j].right_answer == baseResult[j+1]) {
+          answer_color = 'green'; }
+
+           field.append('<div class="result answers">'+base.bullet[j].answers[n]+'<span class="'+answer_color+'">'+your+'</span>'+'</div>');
         }
       }
     field.append('<div class="line"></div>');//line
+    
+
+
+
     } else {
 
+      // *** Print - input *********************
+
       your = " (Ваш ответ)  ";
+
+      let answer_color = 'red';
+          if (base.bullet[j].right_answer == baseResult[j+1]) {
+          answer_color = 'green'; }
+
+
       field.append('<div class="result answers green">'+ base.bullet[j].right_answer + '</div>');
 
-      field.append('<div class="result answers">'+'<span class="blue">'+your+'</span>'+ baseResult[j+1] + '</div>');
+      field.append('<div class="result answers" style="font-weight: 600;">'+'<span class="'+answer_color+'">'+your+'</span>'+ baseResult[j+1] + '</div>');
+
+      if (base.bullet[j].right_answer == baseResult[j+1]) { total_right++ ; }
 
 
     field.append('<div class="line"></div>');//line
@@ -164,7 +195,6 @@ function print_result (base,baseResult) {
     
   }
 
-  // *** Print - input *********************
 
   
 

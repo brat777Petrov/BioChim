@@ -1157,14 +1157,19 @@ div.foto_vypusknika>p {
 
 .green {
 	color: green;
+  font-weight: 800;
+}
+
+.red {
+  color: red;
   font-weight: 600;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .blue {
   color: blue;
   font-weight: 600;
-  text-decoration: none;
+  
 }
 
 .total_right {
@@ -1179,7 +1184,8 @@ div.foto_vypusknika>p {
 
   font-size: 20px;
   font-weight: 600;
-  color: orange;
+  color: white;
+  background-color : orange;
 
-  border: 2px solid grey;
+  /*border: 2px solid grey;*/
 }
