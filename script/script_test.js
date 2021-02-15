@@ -11,7 +11,7 @@ async function next() {
   localStorage.flag_answer = false;
 //************** Подключение JSON файла 
                      
-let  response =  await fetch('../tests/biolog_test_1.json');
+let  response =  await fetch('../tests/biolog_test_1.json', {mode: 'no-cors'});
 
 let base =  await response.json();
 
